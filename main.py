@@ -49,16 +49,21 @@ class Root(CTk):
         self.frame_right.grid(row=0, column=1, sticky="nswe", padx=20, pady=20)
 
         # Configuration of the frame grid
-        self.frame_right.rowconfigure((1, 2, 3), weight=1)
-        self.frame_right.rowconfigure((0, 4), weight=10)
+        self.frame_right.rowconfigure((0, 2, 3), weight=1)
+        self.frame_right.rowconfigure((1, 4), weight=10)
         self.frame_right.columnconfigure((0, 1, 2), weight=1)
 
         # Labels
+        self.label_title = CTkLabel(master=self.frame_right,
+                                    text='Speed Test',
+                                    text_font=("Roboto Medium", -25),
+                                    justify=CENTER)
+        self.label_title.grid(row=0, column=1, pady=5)
         self.label_speed = CTkLabel(master=self.frame_right,
                                     text='',
                                     text_font=("Roboto Medium", -16),
                                     justify=LEFT)
-        self.label_speed.grid(row=3, column=1, pady=10, padx=20)
+        self.label_speed.grid(row=3, column=1)
 
         # Buttons
         self.thread_button = CTkOptionMenu(master=self.frame_right, values=['Multi', 'Single'],
