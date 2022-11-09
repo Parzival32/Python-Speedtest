@@ -7,7 +7,7 @@
 - Tkinter (or more precisely customtkinter)
 - Speedtest
 
-To install the modules just run the following command in your terminal ```pip install requirements.txt```
+To install the modules just run the following command in your terminal ```pip -r install requirements.txt```
 
 ## How to use the program
 
